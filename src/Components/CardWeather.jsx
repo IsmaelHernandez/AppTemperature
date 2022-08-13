@@ -1,22 +1,24 @@
 import axios from "axios";
-import React from "react";
 import { useState, useEffect } from "react";
 import LoadingScreen from "./LoadingScreen";
 
 function CardWeather({ lat, long }) {
   //estado para guardar info
   const [weather, setWeather] = useState();
+  //estado temperaturta
   const [temp, setTemp] = useState();
+  //estado celsius
   const [isCelsius, setIsCelsius] = useState(true);
+  //estado pantalla de carga
   const [isLoading, setIsLoading] = useState(true)
+
   //peticion en el useefect
   useEffect(() => {
     if (lat && long) {
       const APIKey = `8085e3d6186630918661f9832655daa6`;
       const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIKey}`;
 
-      axios
-        .get(URL)
+      axios.get(URL)
         .then((res) => {
           setWeather(res.data);
           const temp = {
@@ -40,7 +42,7 @@ function CardWeather({ lat, long }) {
     return (
       <article>
         <h1>Wheather App</h1>
-        <h2>{`${weather?.name}, ${weather?.sys.country} }`}</h2>
+        <h2>{`${weather?.name}, ${weather?.sys.country}`}</h2>
         <div>
           <img
             src={
