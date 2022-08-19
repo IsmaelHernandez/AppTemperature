@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 img{
     width: 100%;
 }
@@ -26,10 +27,19 @@ h1,h2,h3,p{
     background-color: lihtslategray;
     /* margin: 0; */
     width:100%;
+=======
+body{
+    margin:0;   
+    padding: 0;
+  }
+  
+  .App{
+>>>>>>> 4a464a28556f785b34ca139198a2207220657f8e
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
 }
 
 .divConverter{
@@ -179,3 +189,6 @@ span{
 
 
   
+=======
+  }
+>>>>>>> 4a464a28556f785b34ca139198a2207220657f8e
