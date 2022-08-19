@@ -26,7 +26,7 @@ function CardWeather({ lat, long }) {
           setTemp(temp);
           setIsLoading(false);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err)); //captura errores en la peticion
     }
   }, [lat, long]);
 
@@ -38,10 +38,10 @@ function CardWeather({ lat, long }) {
     return <LoadingScreen />;
   } else {
     return (
-      <article>
+      <article className="card-weather">
         <h1>Wheather App</h1>
-        <h2>{`${weather?.name}, ${weather?.sys.country} }`}</h2>
-        <div>
+        <p className="card-weather--description">{`${weather?.name}, ${weather?.sys.country}`}</p>
+        <div className="card-weather__body">
           <img
             src={
               weather &&
@@ -49,28 +49,32 @@ function CardWeather({ lat, long }) {
             }
             alt=""
           />
-          <div>
-            <h3>{weather?.weather[0].description}</h3>
+          <div className="card-weather__body--right">
+            <h1>{weather?.weather[0].description}</h1>
             <ul>
               <li>
-                <span>Wind Speed</span>
+                <span>Wind Speed:</span>
                 {weather?.wind.speed}
               </li>
               <li>
-                <span>Clouds</span>
+                <span>Clouds:</span>
                 {weather?.clouds.all}%
               </li>
               <li>
-                <span>Pressure</span>
+                <span>Pressure:</span>
                 {weather?.main.pressure}hpa
               </li>
             </ul>
           </div>
         </div>
-        <h2>{isCelsius ? temp?.celsius : temp?.farenheit}Convrtir</h2>
-        <button onClick={handleClick}>
-          {isCelsius ? "change to F" : "change to C"}
-        </button>
+        <div className="divConverter">
+          <h3>{isCelsius ? temp?.celsius : temp?.farenheit}Convrtir</h3>
+        </div>
+        <div className="divBoton">
+          <button className="btn btn-card" onClick={handleClick}>
+            {isCelsius ? "change to F" : "change to C"}
+          </button>
+        </div>
       </article>
     );
   }

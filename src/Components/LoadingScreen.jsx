@@ -2,9 +2,12 @@ import React from 'react'
 
 function LoadingScreen() {
   return (
-    <h1>
+    <div className='divisLoading'>
+      <h1 className='text-center'>
         loading .....
-        </h1>
+      </h1>
+    </div>
+    
   )
 }
 
