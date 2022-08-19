@@ -42,13 +42,8 @@ function CardWeather({ lat, long }) {
     return (
       <article className="card-weather">
         <h1>Wheather App</h1>
-<<<<<<< HEAD
         <p className="card-weather--description">{`${weather?.name}, ${weather?.sys.country}`}</p>
         <div className="card-weather__body">
-=======
-        <h2>{`${weather?.name}, ${weather?.sys.country}`}</h2>
-        <div>
->>>>>>> 4a464a28556f785b34ca139198a2207220657f8e
           <img
             src={
               weather &&
