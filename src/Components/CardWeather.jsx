@@ -73,7 +73,7 @@ function CardWeather({ lat, long }) {
           <h3>{isCelsius ? temp?.celsius : temp?.farenheit}Convrtir</h3>
         </div>
         <div className="divBoton">
-          <button className="btn btn-card" onClick={handleClick}>
+          <button className="button" onClick={handleClick}>
             {isCelsius ? "change to F" : "change to C"}
           </button>
         </div>
