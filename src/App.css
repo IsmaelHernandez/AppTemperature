@@ -132,7 +132,7 @@ h1,h2,h3,p{
 /* componente weather */
 .card-weather{
     background-color: #1abc9c;
-    border: 1px solid white;
+    border: 10px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,6 +140,7 @@ h1,h2,h3,p{
     min-width: 280px;
     min-height: 350px;
     padding: 1em;
+    margin: 50px;
     border-radius: 20px;
 }
 
@@ -244,6 +245,11 @@ span{
 }
 
   
-
+.divContainer{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 
   
