@@ -33,7 +33,7 @@ function CardWeather({ lat, long }) {
   }, [lat, long]);
 
   console.log(weather);
-
+  // si es true lo convierto en false
   const handleClick = () => setIsCelsius(!isCelsius);
 
   if (isLoading) {
